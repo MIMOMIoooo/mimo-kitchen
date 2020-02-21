@@ -23,8 +23,7 @@ body {
   }
   .top-page {
     .site-header{
-      // display: flex;
-      display: grid;
+      // display: grid;
       background-color: transparent;
       grid-template-columns: repeat(12, 1fr);
     }
@@ -35,7 +34,7 @@ body {
 
     }
     .container {
-      padding-top: 4px;
+      padding-top: 10px;
       text-align: center;
       grid-column: 2;
       .site-header-branding {
@@ -43,7 +42,8 @@ body {
           height: 72px;
           margin: 0;
           .site-logo {
-            width: 100%;
+            // width: 100%;
+            display: block;
             img{
               height: 55px;
             }
@@ -59,8 +59,8 @@ body {
     }
     #nav-drawer {
       position: relative;
-      top: 20px;
-      left: -40px;
+      top: -58px;
+      left: 25px;
       .nav-unshown {
         display:none;
       }
@@ -69,7 +69,7 @@ body {
         width: 30px;
         height: 22px;
         vertical-align: middle;
-        @media screen and (min-width:480px) {
+        @media (min-width:1024px) {
           display:none;
         }
       }
@@ -148,13 +148,20 @@ body {
         box-shadow: 6px 0 25px rgba(0,0,0,.15);
       }
     }
-    #nav-pc {
-      grid-column: 8/12;
+    
+    .nav-pc-size {
+      display: none;
+      @media  (min-width:1024px) {
+        display: grid;
+        grid-column: 8/12;
+      }
       .nav-content-pc {
         .nav-items-menu-pc {
-          display: flex;
-          justify-content: space-between;
-          padding-top: 20px;
+          @media (min-width:1024px) {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 20px;
+          }
           li {
             a {
               color: #fff;
@@ -166,14 +173,23 @@ body {
 
   }//top-page
   header {
+
     .article-header {
-      
+      box-sizing: border-box;
+      color: #FFF;
+      font-size: 5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      padding: 5%;
     }
     .article-header--page {
       position: relative;
       height: 700px;
       background: url(./img/header.jpg) no-repeat;
       background-size: cover;
+      background-attachment: fixed;
       background-position-x: 20%;
       :before {
         content: '';
@@ -184,9 +200,6 @@ body {
         bottom: 0;
         background-color: rgba(0, 0, 0, 0.15); /*半透明のフィルター*/
       }
-    }
-    .full-height {
-      
     }
     .article-header-logo {
       h2 {
@@ -202,18 +215,29 @@ body {
   }//header
   .news {
     .news-wrapper {
-      background-color: #a0a0a091;
+      background-color: #262426;
       ul {
-        padding: 50px 15px;
+        padding: 35px 15px;
+        color: #fff;
         li {
           display: flex;
+          flex-wrap: wrap;
           justify-content: flex-start;
-          border-bottom: 1px dotted #000;
           padding: 20px 0;
+          &:not(:last-child) {
+            border-bottom: .5px dotted rgb(202, 197, 197);
+          }
+          time {
+            display: inline-block;
+            position: relative;
+            font-weight: bold;
+            padding: 0 20px;
+            letter-spacing: 2px;
+          }
           .news-time {
             position: relative;
             margin-bottom: 8px;
-            &:before
+            &:before {
             display: inline-block;
             position: absolute;
             content: "";
@@ -224,13 +248,31 @@ body {
             height: 0;
             border-style: solid;
             border-width: 3px 0 3px 5px;
-            border-color: transparent transparent transparent #000;
+            // border-color: transparent transparent transparent #000;
+            border-color: transparent transparent transparent #fff;
           }
-          a {
+          .news-text {
+            color: #fff;
             font-weight: bold;
+          }
           }
         }
       }
     }
-  }
+  }//news
+  .concept {
+    .section-title {
+      position: relative;
+      h3 {
+        text-align: center;
+        &::after {
+        display: block;
+        content: "";
+        border-bottom: 3px solid #000;
+        width: 20px;
+        margin: 10px auto;
+        }
+      }
+    }
+  }//concept
 }
