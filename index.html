@@ -10,101 +10,126 @@
     <link rel="stylesheet" type="text/css" href="main.css">
     <!-- リセットCSS -->
     <link href="https://unpkg.com/sanitize.css" rel="stylesheet"/>
+
     <!-- Bootstrap CSS -->
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
     <!-- FontAwesome -->
     <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+
     <!-- favicon -->
-    
     <link rel="icon" href="./img/favicon.ico">
 
     <title>MIMO KITCHEN｜web製作エンジニアMIMOMIの架空カフェサイト</title>
   </head>
   <body>
-    <div id="page" class="page">
-      <!-- ナビゲーション -->
+    <div id="page" class="page fixed-top">
+      <!-- ナビゲーション inversedは逆さ-->
       <div class="site-header  header--inversed  js-header">
         <div class="container">
-          <div class="flexbox">
-            <!-- <div class="flexbox__item">
-              <a href="#" class="js-nav-trigger  nav-trigger"><i class="icon-reorder"></i></a>
-            </div> -->
-            <!-- 左上のアイコン -->
-            <div class="flexbox__item  branding-container">
-              <div class="site-header__branding">
-                <h1 class="site-title site-title--image">
-                  <a class="site-logo  site-logo--image" href="#page" title="MIMO KITCHENの架空カフェサイト" rel="home">
-                    <img class="site-logo-img--light" src="./img/mino-kitchen -icon.png"  rel="logo" alt="">
-                    <!-- 画面が下にスクロールした時に変化するDarkバージョン -->
-                    <img class="site-logo-img--dark" src=""  rel="logo" alt="">
-                  </a>
-                </h1>
-              </div>				
-            </div>
-            <!-- 右上のナビメニュー -->
-            <div class="flexbox__item">
-              <nav class="navigation  navigation--main" id="js-navigation--main">
-                <!-- <h2 class="accessibility">Primary Navigation</h2> -->
-                <ul class="nav  nav--main  nav--items-social">
-                  <!-- SNSアイコン -->
-                  <li>
-                    <a class="social-icon" href="" >
-                      <i class="icon-e-instagram"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="social-icon" href="" >
-                      <i class="icon-e-twitter"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="social-icon" href="" >
-                      <i class="icon-e-facebook"></i>
-                    </a>
-                  </li>
-                </ul>
-                <!-- メニュー -->
-                <ul id="" class="nav  nav--main  nav--items-menu">
-                  <li id="menu-item-1702" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2 current_page_item menu-item-1702">
-                    <a href="">Home</a>
-                  </li>
-                  <li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-40">
-                    <a href="">Concept</a>
-                  </li>
-                  <li id="menu-item-38" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38">
-                    <a href="">アクセス</a>
-                  </li>
-                  </ul>
-                </ぢv>
-            </div>
+          <!-- 左上のロゴ -->
+          <div class="site-header-branding">
+            <h1 class="site-title site-title--image">
+              <a class="site-logo  site-logo--image" href="#page" title="MIMO KITCHENの架空カフェサイト" rel="home">
+                <img class="site-logo-img--light" src="./img/mino-kitchen -icon.png" rel="logo" alt="">
+                <!-- 画面が下にスクロールした時に変化するDarkバージョン -->
+                <img class="site-logo-img--dark" src="" rel="logo" alt="">
+              </a>
+            </h1>
+          </div>				
+        </div>
+        <!-- 右上のナビメニュー -->
+        <nav id="nav-drawer">
+          <input id="nav-input" type="checkbox" class="nav-unshown">
+          <label id="nav-open" for="nav-input"><span></span></label>
+          <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+          <div id="nav-content">
+            <ul class="nav-items-menu">
+              <li><a href="#page">Home</a></li>
+              <li><a href="#concept">Concept</a></li>
+              <li><a href="#access">アクセス</a></li>
+            </ul>
           </div>
-          <!-- .flexbox -->
         </nav>
-        <!-- containerのafterがあるぞー -->
         <!-- .container -->
       </div>
       <!-- .site-header -->
     </div>
     <!-- ヘッダー -->
-    <header id="post-2-title" class="article__header  article__header--page full-height" data-type="image">
-      <div class="article__parallax  article__parallax--img">
-        <!-- ヘッダーの画像 -->
-        <img src="" alt="">
-      </div>
-      <div class="flexbox">
-        <div class="flexbox__item">
-          <!-- 中央のアイコン -->
-          <h2 class="article__headline">
-            <img src="" alt="">
-          </h2>
+    <header id="">
+      <div class="article-header  article-header--page full-height" data-type="image">
+        <div class="article-parallax  article-parallax--img">
+          <!-- ヘッダーの画像 -->
+          <!-- <img src="./img/header.jpg" alt="店内の写真"> -->
+        </div>
+        <div class="article-header-logo">
+          <!-- <div class="flexbox__item"> -->
+            <!-- 中央のロゴ -->
+            <h2>
+              <img src="./img/mino-kitchen.png" alt="ロゴ">
+            </h2>
+          <!-- </div> -->
         </div>
       </div>
     </header>
-
+    <section class="news">
+      <div class="news-wrapper">
+        <ul>
+          <li><a><time>2020-02-14</time>先着50名様に当店のオリジナルチョコをプレゼントいたします。</a></li>
+          <li><a><time>2020-01-06</time>『ママのためのパン作り』ワークショップを１月24日(金)11時から開始いたします。</a></li>
+          <li><a><time>2919-12-05</time>【年末年始のお知らせ】MIMO KITCHINは12月31日〜1月3日まで休業いたします。</a></li>
+        </ul>
+      </div>
+    </section>
+    <section class="concept">
+      <div class="section-title">
+        <h3>CONCEPT</h3>
+      </div>
+      <div class="concept-wrap">
+        <div class="bread-about">
+          <div class="concept-text bread">
+            <h5>小見出し小見出し小見出し</h5>
+            <p>テキストテキストテキスト、テキストテキストテキストテキストテキストテキストテキスト。</p>
+          </div>
+        </div>
+        <div class="pasta-about">
+          <div class="concept-text pasta">
+            <h5>小見出し小見出し小見出し</h5>
+            <p>テキストテキストテキスト、テキストテキストテキストテキストテキストテキストテキスト。</p>
+          </div>
+        </div>
+        <div class="coffee-about">
+          <div class="concept-text coffee">
+            <h5>小見出し小見出し小見出し</h5>
+            <p>テキストテキストテキスト、テキストテキストテキストテキストテキストテキストテキスト。</p>
+          </div>
+        </div>
+        <div class="vegetable-about">
+          <div class="concept-text vegetable">
+            <h5>小見出し小見出し小見出し</h5>
+            <p>テキストテキストテキスト、テキストテキストテキストテキストテキストテキストテキスト。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="access">
+      <div class="section-title">
+        <h3>ACCESS</h3>
+      </div>
+    </section>
+    <footer>
+      <div class="">
+        <ul>
+          <li><a href="#">インスタアイコン</a></li>
+          <li><a href="#">ツイッターアイコン</a></li>
+          <li><a href="#">facebookアイコン</a></li>
+      </ul>
+      </div>
+    </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> -->
   </body>
 </html>
