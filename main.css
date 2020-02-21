@@ -22,51 +22,58 @@ body .fixed-top {
   z-index: 1030;
 }
 
-body .page .site-header {
-  display: flex;
+body .top-page .site-header {
+  display: grid;
   background-color: transparent;
+  grid-template-columns: repeat(12, 1fr);
 }
 
-body .page .container {
-  position: relative;
-  left: 43%;
-  top: 5px;
+body .top-page .container {
+  padding-top: 4px;
+  text-align: center;
+  grid-column: 2;
 }
 
-body .page .container .site-header-branding .site-title {
+body .top-page .container .site-header-branding .site-title {
   height: 72px;
   margin: 0;
 }
 
-body .page .container .site-header-branding .site-title .site-logo {
+body .top-page .container .site-header-branding .site-title .site-logo {
   width: 100%;
 }
 
-body .page .container .site-header-branding .site-title .site-logo img {
+body .top-page .container .site-header-branding .site-title .site-logo img {
   height: 55px;
 }
 
-body .page #nav-drawer {
+body .top-page #nav-drawer {
   position: relative;
   top: 20px;
   left: -40px;
   /*閉じる用の薄黒カバー*/
   /*中身*/
-  /*チェックが入ったらもろもろ表示*/
+  /*チェックが入ったら表示*/
 }
 
-body .page #nav-drawer .nav-unshown {
+body .top-page #nav-drawer .nav-unshown {
   display: none;
 }
 
-body .page #nav-drawer #nav-open {
+body .top-page #nav-drawer #nav-open {
   display: inline-block;
   width: 30px;
   height: 22px;
   vertical-align: middle;
 }
 
-body .page #nav-drawer #nav-open span, body .page #nav-drawer #nav-open span:before, body .page #nav-drawer #nav-open span:after {
+@media screen and (min-width: 480px) {
+  body .top-page #nav-drawer #nav-open {
+    display: none;
+  }
+}
+
+body .top-page #nav-drawer #nav-open span, body .top-page #nav-drawer #nav-open span:before, body .top-page #nav-drawer #nav-open span:after {
   position: absolute;
   height: 3px;
   /*線の太さ*/
@@ -79,15 +86,15 @@ body .page #nav-drawer #nav-open span, body .page #nav-drawer #nav-open span:bef
   cursor: pointer;
 }
 
-body .page #nav-drawer #nav-open span:before {
+body .top-page #nav-drawer #nav-open span:before {
   bottom: -8px;
 }
 
-body .page #nav-drawer #nav-open span:after {
+body .top-page #nav-drawer #nav-open span:after {
   bottom: -16px;
 }
 
-body .page #nav-drawer #nav-close {
+body .top-page #nav-drawer #nav-close {
   display: none;
   /*はじめは隠しておく*/
   position: fixed;
@@ -102,7 +109,7 @@ body .page #nav-drawer #nav-close {
   transition: .3s ease-in-out;
 }
 
-body .page #nav-drawer #nav-content {
+body .top-page #nav-drawer #nav-content {
   overflow: auto;
   position: fixed;
   top: 0;
@@ -122,21 +129,47 @@ body .page #nav-drawer #nav-content {
   /*左に隠しておく*/
 }
 
-body .page #nav-drawer #nav-content .nav-items-menu a {
+body .top-page #nav-drawer #nav-content .nav-items-menu {
+  width: auto;
+  padding: 20px;
+}
+
+body .top-page #nav-drawer #nav-content .nav-items-menu li {
+  width: 50%;
+  padding-top: 25px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #a0a0a0;
+}
+
+body .top-page #nav-drawer #nav-content .nav-items-menu a {
   color: #fff;
 }
 
-body .page #nav-drawer #nav-input:checked ~ #nav-close {
+body .top-page #nav-drawer #nav-input:checked ~ #nav-close {
   display: block;
   /*カバーを表示*/
   opacity: .5;
 }
 
-body .page #nav-drawer #nav-input:checked ~ #nav-content {
+body .top-page #nav-drawer #nav-input:checked ~ #nav-content {
   -webkit-transform: translateX(0%);
   transform: translateX(0%);
   /*中身を表示（右へスライド）*/
   box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
+}
+
+body .top-page #nav-pc {
+  grid-column: 8/12;
+}
+
+body .top-page #nav-pc .nav-content-pc .nav-items-menu-pc {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+body .top-page #nav-pc .nav-content-pc .nav-items-menu-pc li a {
+  color: #fff;
 }
 
 body header .article-header--page {
@@ -167,4 +200,26 @@ body header .article-header-logo h2 {
 
 body header .article-header-logo h2 img {
   width: 200px;
+}
+
+body .news .news-wrapper {
+  background-color: #a0a0a091;
+}
+
+body .news .news-wrapper ul {
+  padding: 50px 15px;
+}
+
+body .news .news-wrapper ul li .news-time {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  margin-top: -3px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 3px 0 3px 5px;
+  border-color: transparent transparent transparent #000;
 }

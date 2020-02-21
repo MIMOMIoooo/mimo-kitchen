@@ -22,7 +22,7 @@
     <title>MIMO KITCHEN｜web製作エンジニアMIMOMIの架空カフェサイト</title>
   </head>
   <body>
-    <div id="page" class="page fixed-top">
+    <div id="top-page" class="top-page fixed-top">
       <!-- ナビゲーション inversedは逆さ-->
       <div class="site-header  header--inversed  js-header">
         <div class="container">
@@ -37,13 +37,23 @@
             </h1>
           </div>				
         </div>
-        <!-- 右上のナビメニュー -->
+        <!-- ハンバーガーメニュー -->
         <nav id="nav-drawer">
           <input id="nav-input" type="checkbox" class="nav-unshown">
           <label id="nav-open" for="nav-input"><span></span></label>
           <label class="nav-unshown" id="nav-close" for="nav-input"></label>
           <div id="nav-content">
             <ul class="nav-items-menu">
+              <li><a href="#page">Home</a></li>
+              <li><a href="#concept">Concept</a></li>
+              <li><a href="#access">アクセス</a></li>
+            </ul>
+          </div>
+        </nav>
+        <!-- 480px以上のナビメニュー -->
+        <nav id="nav-pc">
+          <div class="nav-content-pc">
+            <ul class="nav-items-menu-pc">
               <li><a href="#page">Home</a></li>
               <li><a href="#concept">Concept</a></li>
               <li><a href="#access">アクセス</a></li>
@@ -74,9 +84,29 @@
     <section class="news">
       <div class="news-wrapper">
         <ul>
-          <li><a><time>2020-02-14</time>先着50名様に当店のオリジナルチョコをプレゼントいたします。</a></li>
-          <li><a><time>2020-01-06</time>『ママのためのパン作り』ワークショップを１月24日(金)11時から開始いたします。</a></li>
-          <li><a><time>2919-12-05</time>【年末年始のお知らせ】MIMO KITCHINは12月31日〜1月3日まで休業いたします。</a></li>
+          <li>
+            <time class="news-time" datetime="2020-02-14">
+              2020-02-14
+            </time>
+            <div class="news-text">
+              先着50名様に当店のオリジナルチョコをプレゼントいたします。</li>
+            </div>
+          <li>
+            <time class="news-time" datetime="2020-01-06">
+              2020-01-06
+            </time>
+            <div class="news-text">
+            『ママのためのパン作り』ワークショップを１月24日(金)11時から開始いたします。
+            </div>
+          </li>
+          <li>
+            <time class="news-time" datetime="2019-12-05">
+              2919-12-05
+            </time>
+            <div class="news-text">
+            【年末年始のお知らせ】MIMO KITCHINは12月31日〜1月3日まで休業いたします。
+            </div>
+          </li>
         </ul>
       </div>
     </section>
