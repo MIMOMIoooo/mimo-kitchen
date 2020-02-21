@@ -289,3 +289,44 @@ body .concept .section-title h3::after {
   width: 20px;
   margin: 10px auto;
 }
+
+body .concept .concept-wrap .bread-about {
+  height: 325px;
+  background: url(./img/pan.jpg) no-repeat center;
+  background-size: cover;
+}
+
+body .concept .concept-wrap .pasta-about {
+  height: 325px;
+  background: url(./img/pasta.jpg) no-repeat center;
+  background-size: cover;
+}
+
+body .concept .concept-wrap .coffee-about {
+  height: 325px;
+  background: url(./img/pasta.jpg) no-repeat center;
+  background-size: cover;
+}
+
+body .concept .concept-wrap .vegetable-about {
+  height: 325px;
+  background: url(./img/pasta.jpg) no-repeat center;
+  background-size: cover;
+}
+
+body .concept .concept-wrap .concept-text {
+  background-color: #fff;
+  height: 100px;
+}
+
+body .concept .concept-wrap .concept-text h5 {
+  font-size: 1rem;
+  margin: 1.5rem;
+  text-align: center;
+}
+
+body .concept .concept-wrap .concept-text p {
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 20px;
+}

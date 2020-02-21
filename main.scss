@@ -274,5 +274,43 @@ body {
         }
       }
     }
+    .concept-wrap {
+      .bread-about {
+        height: 325px;
+        background: url(./img/pan.jpg) no-repeat center;
+        background-size: cover;
+        .bread {
+        }
+      }
+      .pasta-about {
+        height: 325px;
+        background: url(./img/pasta.jpg) no-repeat center;
+        background-size: cover;
+      }
+      .coffee-about {
+        height: 325px;
+        background: url(./img/pasta.jpg) no-repeat center;
+        background-size: cover;
+      }
+      .vegetable-about {
+        height: 325px;
+        background: url(./img/pasta.jpg) no-repeat center;
+        background-size: cover;
+      }
+      .concept-text {
+        background-color: #fff;
+        height: 100px;
+        h5 {
+          font-size: 1rem;
+          margin: 1.5rem;
+          text-align: center;
+        }
+        p {
+          text-align: left;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+    }
   }//concept
 }
