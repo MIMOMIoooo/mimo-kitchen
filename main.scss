@@ -23,9 +23,11 @@ body {
   }
   .top-page {
     .site-header{
-      // display: grid;
       background-color: transparent;
-      grid-template-columns: repeat(12, 1fr);
+      @media (min-width:1024px) {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+      }
     }
     .header--inversed {
 

@@ -24,7 +24,13 @@ body .fixed-top {
 
 body .top-page .site-header {
   background-color: transparent;
-  grid-template-columns: repeat(12, 1fr);
+}
+
+@media (min-width: 1024px) {
+  body .top-page .site-header {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
 }
 
 body .top-page .container {
