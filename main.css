@@ -9,6 +9,10 @@ body, p, a, ul, li {
   text-decoration: none;
 }
 
+.headerColor-default {
+  background-color: #262426;
+}
+
 body {
   position: relative;
   overflow-x: hidden;

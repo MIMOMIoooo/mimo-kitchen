@@ -10,6 +10,10 @@ body,p,a,ul,li {
   text-decoration: none;
 }
 
+.headerColor-default {
+  background-color: #262426;
+}
+
 // モバイルファースト320px~
 body {
   position: relative;
@@ -31,12 +35,6 @@ body {
         grid-template-columns: repeat(12, 1fr);
       }
     }
-    .header--inversed {
-
-    }
-    .js-header {
-
-    }
     .container {
       padding-top: 10px;
       grid-template-columns: repeat(3, 1fr);
@@ -51,12 +49,12 @@ body {
             img{
               height: 55px;
             }
-            .site-logo-img--light {
+            // .site-logo-img--light {
   
-            }
-            .site-logo-img--dark {
+            // }
+            // .site-logo-img--dark {
   
-            }
+            // }
           }
         }
       }
@@ -280,8 +278,6 @@ body {
         height: 325px;
         background: url(./img/pan.jpg) no-repeat center;
         background-size: cover;
-        .bread {
-        }
       }
       .pasta-about {
         height: 325px;
@@ -341,9 +337,9 @@ body {
     background-color: #262426;
     .footer-wrap {
       ul {
-        li {
+        // li {
 
-        }
+        // }
         a {
           color: #fff;
         }
