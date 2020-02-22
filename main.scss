@@ -382,6 +382,7 @@ body {
   footer {
     background-color: #262426;
     .footer-wrap {
+      text-align: center;
       ul {
         // li {
 
@@ -389,6 +390,9 @@ body {
         a {
           color: #fff;
         }
+      }
+      img {
+        width: 90px;
       }
     }
   }

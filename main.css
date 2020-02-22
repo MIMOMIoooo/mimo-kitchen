@@ -423,6 +423,14 @@ body footer {
   background-color: #262426;
 }
 
+body footer .footer-wrap {
+  text-align: center;
+}
+
 body footer .footer-wrap ul a {
   color: #fff;
+}
+
+body footer .footer-wrap img {
+  width: 90px;
 }
