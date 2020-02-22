@@ -23,6 +23,8 @@ body .fixed-top {
 }
 
 body .top-page .site-header {
+  height: 65px;
+  padding-top: 10px;
   background-color: transparent;
 }
 
@@ -41,6 +43,7 @@ body .top-page .container {
 
 body .top-page .container .site-header-branding {
   grid-column: 2;
+  text-align: center;
 }
 
 body .top-page .container .site-header-branding .site-title {
@@ -206,7 +209,7 @@ body header .article-header--page {
   background-position-x: 20%;
 }
 
-body header .article-header--page :before {
+body header .article-header--page:before {
   content: '';
   position: absolute;
   top: 0;
@@ -351,4 +354,21 @@ body .access .section-title h3::after {
   border-bottom: 3px solid #000;
   width: 20px;
   margin: 10px auto;
+}
+
+body .access .maps {
+  text-align: center;
+}
+
+body .access .maps iframe {
+  max-width: 290px;
+  max-height: 200px;
+}
+
+body footer {
+  background-color: #262426;
+}
+
+body footer .footer-wrap ul a {
+  color: #fff;
 }

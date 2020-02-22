@@ -1,7 +1,5 @@
 @charset "utf-8";
 
-// モバイルファースト320px~
-
 // リセット+α
 li {
   list-style-type: none;
@@ -11,6 +9,8 @@ body,p,a,ul,li {
   padding: 0;
   text-decoration: none;
 }
+
+// モバイルファースト320px~
 body {
   position: relative;
   overflow-x: hidden;
@@ -23,6 +23,8 @@ body {
   }
   .top-page {
     .site-header{
+      height: 65px;
+      padding-top: 10px;
       background-color: transparent;
       @media (min-width:1024px) {
         display: grid;
@@ -37,17 +39,15 @@ body {
     }
     .container {
       padding-top: 10px;
-      // text-align: center;
       grid-template-columns: repeat(3, 1fr);
       display: grid;
       .site-header-branding {
         grid-column: 2;
+        text-align: center;
         .site-title {
           height: 72px;
           margin: 0;
           .site-logo {
-            // width: 100%;
-            // display: block;
             img{
               height: 55px;
             }
@@ -83,7 +83,6 @@ body {
         height: 3px;/*線の太さ*/
         width: 25px;/*長さ*/
         border-radius: 3px;
-        // background: #555;
         background: #fff;
         display: block;
         content: '';
@@ -139,13 +138,11 @@ body {
           }
         }
       }
-      
       /*チェックが入ったら表示*/
       #nav-input:checked ~ #nav-close {
         display: block;/*カバーを表示*/
         opacity: .5;
       }
-      
       #nav-input:checked ~ #nav-content {
         -webkit-transform: translateX(0%);
         transform: translateX(0%);/*中身を表示（右へスライド）*/
@@ -174,10 +171,9 @@ body {
         }
       }
     }
-
   }//top-page
-  header {
 
+  header {
     .article-header {
       box-sizing: border-box;
       color: #FFF;
@@ -195,7 +191,7 @@ body {
       background-size: cover;
       background-attachment: fixed;
       background-position-x: 20%;
-      :before {
+      &:before {
         content: '';
         position: absolute;
         top: 0;
@@ -333,5 +329,26 @@ body {
         }
       }
     }
+    .maps {
+      text-align: center;
+      iframe {
+        max-width: 290px;
+        max-height: 200px;
+      }
+    } 
+  }//access
+  footer {
+    background-color: #262426;
+    .footer-wrap {
+      ul {
+        li {
+
+        }
+        a {
+          color: #fff;
+        }
+      }
+    }
   }
+
 }
