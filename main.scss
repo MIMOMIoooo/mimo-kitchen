@@ -37,15 +37,17 @@ body {
     }
     .container {
       padding-top: 10px;
-      text-align: center;
-      grid-column: 2;
+      // text-align: center;
+      grid-template-columns: repeat(3, 1fr);
+      display: grid;
       .site-header-branding {
+        grid-column: 2;
         .site-title {
           height: 72px;
           margin: 0;
           .site-logo {
             // width: 100%;
-            display: block;
+            // display: block;
             img{
               height: 55px;
             }

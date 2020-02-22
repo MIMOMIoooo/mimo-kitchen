@@ -35,17 +35,17 @@ body .top-page .site-header {
 
 body .top-page .container {
   padding-top: 10px;
-  text-align: center;
+  grid-template-columns: repeat(3, 1fr);
+  display: grid;
+}
+
+body .top-page .container .site-header-branding {
   grid-column: 2;
 }
 
 body .top-page .container .site-header-branding .site-title {
   height: 72px;
   margin: 0;
-}
-
-body .top-page .container .site-header-branding .site-title .site-logo {
-  display: block;
 }
 
 body .top-page .container .site-header-branding .site-title .site-logo img {
