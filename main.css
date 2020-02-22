@@ -310,13 +310,13 @@ body .concept .concept-wrap .pasta-about {
 
 body .concept .concept-wrap .coffee-about {
   height: 325px;
-  background: url(./img/pasta.jpg) no-repeat center;
+  background: url(./img/coffee.jpg) no-repeat center;
   background-size: cover;
 }
 
 body .concept .concept-wrap .vegetable-about {
   height: 325px;
-  background: url(./img/pasta.jpg) no-repeat center;
+  background: url(./img/yasai.jpg) no-repeat center;
   background-size: cover;
 }
 
@@ -335,4 +335,20 @@ body .concept .concept-wrap .concept-text p {
   text-align: left;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+body .access .section-title {
+  position: relative;
+}
+
+body .access .section-title h3 {
+  text-align: center;
+}
+
+body .access .section-title h3::after {
+  display: block;
+  content: "";
+  border-bottom: 3px solid #000;
+  width: 20px;
+  margin: 10px auto;
 }

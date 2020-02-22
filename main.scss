@@ -263,6 +263,7 @@ body {
     }
   }//news
   .concept {
+    //ここは繰り返すスタイルなのであとで@mixinにする
     .section-title {
       position: relative;
       h3 {
@@ -291,12 +292,12 @@ body {
       }
       .coffee-about {
         height: 325px;
-        background: url(./img/pasta.jpg) no-repeat center;
+        background: url(./img/coffee.jpg) no-repeat center;
         background-size: cover;
       }
       .vegetable-about {
         height: 325px;
-        background: url(./img/pasta.jpg) no-repeat center;
+        background: url(./img/yasai.jpg) no-repeat center;
         background-size: cover;
       }
       .concept-text {
@@ -315,4 +316,20 @@ body {
       }
     }
   }//concept
+  .access {
+    //繰り返しスタイル
+    .section-title {
+      position: relative;
+      h3 {
+        text-align: center;
+        &::after {
+        display: block;
+        content: "";
+        border-bottom: 3px solid #000;
+        width: 20px;
+        margin: 10px auto;
+        }
+      }
+    }
+  }
 }
