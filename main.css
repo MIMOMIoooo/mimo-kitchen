@@ -340,9 +340,11 @@ body .concept .concept-wrap .bread-about {
 }
 
 body .concept .concept-wrap .bread-about .bread {
+  position: relative;
   width: 85%;
-  height: 125px;
+  height: 135px;
   margin: 0 0 0 auto;
+  border-bottom-left-radius: 5px;
 }
 
 @media (min-width: 768px) {
@@ -353,6 +355,7 @@ body .concept .concept-wrap .bread-about .bread {
 
 body .concept .concept-wrap .bread-about .bread h5 {
   margin: 0 auto 1rem auto;
+  padding-top: .5rem;
 }
 
 body .concept .concept-wrap .pasta-about {
@@ -373,6 +376,8 @@ body .concept .concept-wrap .pasta-about {
 body .concept .concept-wrap .pasta-about .pasta {
   width: 85%;
   height: 145px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 @media (min-width: 768px) {
@@ -406,6 +411,8 @@ body .concept .concept-wrap .coffee-about .coffee {
   width: 85%;
   height: 145px;
   margin: 0 0 0 auto;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 @media (min-width: 768px) {
@@ -435,6 +442,8 @@ body .concept .concept-wrap .vegetable-about .vegetable {
   height: 145px;
   width: 85%;
   margin: 0 50px 10px 0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 @media (min-width: 768px) {
