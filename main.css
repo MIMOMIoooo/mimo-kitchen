@@ -140,7 +140,7 @@ body .top-page #nav-drawer #nav-content {
   left: 0;
   z-index: 9999;
   /*最前面に*/
-  width: 90%;
+  width: 70%;
   /*右側に隙間を作る（閉じるカバーを表示）*/
   max-width: 330px;
   /*最大幅（調整してください）*/
