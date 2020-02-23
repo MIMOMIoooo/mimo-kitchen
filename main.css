@@ -38,7 +38,6 @@ body .fixed-top {
 
 body .top-page .site-header {
   height: 65px;
-  padding-top: 10px;
   background-color: transparent;
 }
 
@@ -74,7 +73,7 @@ body .top-page .container .site-header-branding .site-title .site-logo img {
 
 body .top-page #nav-drawer {
   position: relative;
-  top: -58px;
+  top: -54px;
   left: 25px;
   /*閉じる用の薄黒カバー*/
   /*中身*/
@@ -478,10 +477,38 @@ body footer .footer-wrap {
   text-align: center;
 }
 
+body footer .footer-wrap ul {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 10px 0 0;
+}
+
+body footer .footer-wrap ul li {
+  margin-right: 4px;
+}
+
+body footer .footer-wrap ul li a .fab {
+  font-size: 1.4rem;
+}
+
+body footer .footer-wrap ul li a .fad-icon {
+  display: inline-block;
+  background-color: #3e3d3e;
+  padding: 0;
+  width: 2.3em;
+  height: 2.3em;
+  line-height: 2.3em;
+  border-radius: 999px;
+}
+
 body footer .footer-wrap ul a {
   color: #fff;
 }
 
 body footer .footer-wrap img {
-  width: 90px;
+  width: 130px;
+}
+
+body footer .footer-wrap .copylight {
+  color: #fff;
 }

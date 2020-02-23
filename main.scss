@@ -37,7 +37,7 @@ body {
   .top-page {
     .site-header{
       height: 65px;
-      padding-top: 10px;
+      // padding-top: 10px;
       background-color: transparent;
       @media (min-width:1024px) {
         display: grid;
@@ -73,7 +73,7 @@ body {
     }
     #nav-drawer {
       position: relative;
-      top: -58px;
+      top: -54px;
       left: 25px;
       .nav-unshown {
         display:none;
@@ -432,15 +432,40 @@ body {
     .footer-wrap {
       text-align: center;
       ul {
-        // li {
-
-        // }
+        display: flex;
+        justify-content: flex-end;
+        padding: 10px 10px 0 0;
+        li {
+          margin-right: 4px;
+          a {
+            .fab {
+              // font-size: 1rem;
+              font-size: 1.4rem;
+            }
+            .fad-icon {
+              display: inline-block;
+              background-color: #3e3d3e;
+              // color: white;
+              padding: 0;
+              // width: 2em;
+              // height: 2em;
+              // line-height: 2em;
+              width: 2.3em;
+              height: 2.3em;
+              line-height: 2.3em;
+              border-radius: 999px;
+            }
+          }
+        }
         a {
           color: #fff;
         }
       }
       img {
-        width: 90px;
+        width: 130px;
+      }
+      .copylight {
+        color: #fff;
       }
     }
   }
