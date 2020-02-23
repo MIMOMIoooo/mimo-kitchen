@@ -269,6 +269,9 @@ body {
   }//news
   .concept {
     //ここは繰り返すスタイルなのであとで@mixinにする
+    @media (min-width: 1024px) {
+      padding: 0 200px;
+    }
     .section-title {
       position: relative;
       h3 {
@@ -285,12 +288,21 @@ body {
     }
     .concept-wrap {
       margin-bottom: 3rem;
+      @media (min-width: 1024px) {
+        border: 1px solid #262426;
+        border-radius: 5px;
+        background-color: #262426;
+      }
       .bread-about {
         height: 325px;
-        background: url(./img/pan.jpg) no-repeat center;
+        background: url(./img/pan.jpg) no-repeat;
         background-size: cover;
+        background-position: center 20px;
         @media (min-width: 768px) {
           height: 370px;
+        }
+        @media (min-width: 1024px) {
+          
         }
         .bread {
           position: relative; //
@@ -435,6 +447,9 @@ body {
           @media (min-width: 768px) { //共通
             font-size: 1rem;
           }
+          @media (min-width: 1024px) {
+            text-align: center;
+          }
         }
       }
     }
@@ -445,6 +460,9 @@ body {
       padding: 0 15px;
       @media (min-width: 768px) { //共通
         padding: 0 70px;
+      }
+      @media (min-width: 1024px) {
+        padding: 0 200px;
       }
       //繰り返しスタイル
       .section-title {
@@ -523,21 +541,22 @@ body {
         display: flex;
         justify-content: flex-end;
         padding: 10px 10px 0 0;
+        @media (min-width: 1024px) {
+          padding: 30px 30px 0 0;
+        }
         li {
-          margin-right: 4px;
+          margin-right: .25rem;
+          @media (min-width: 1024px) {
+            margin-right: 1.25rem;
+          }
           a {
             .fab {
-              // font-size: 1rem;
               font-size: 1.4rem;
             }
             .fad-icon {
               display: inline-block;
               background-color: #3e3d3e;
-              // color: white;
               padding: 0;
-              // width: 2em;
-              // height: 2em;
-              // line-height: 2em;
               width: 2.3em;
               height: 2.3em;
               line-height: 2.3em;

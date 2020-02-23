@@ -306,6 +306,12 @@ body .news .news-wrapper ul li .news-time .news-text {
   font-weight: bold;
 }
 
+@media (min-width: 1024px) {
+  body .concept {
+    padding: 0 200px;
+  }
+}
+
 body .concept .section-title {
   position: relative;
 }
@@ -327,10 +333,19 @@ body .concept .concept-wrap {
   margin-bottom: 3rem;
 }
 
+@media (min-width: 1024px) {
+  body .concept .concept-wrap {
+    border: 1px solid #262426;
+    border-radius: 5px;
+    background-color: #262426;
+  }
+}
+
 body .concept .concept-wrap .bread-about {
   height: 325px;
-  background: url(./img/pan.jpg) no-repeat center;
+  background: url(./img/pan.jpg) no-repeat;
   background-size: cover;
+  background-position: center 20px;
 }
 
 @media (min-width: 768px) {
@@ -487,6 +502,12 @@ body .concept .concept-wrap .concept-text p {
   }
 }
 
+@media (min-width: 1024px) {
+  body .concept .concept-wrap .concept-text p {
+    text-align: center;
+  }
+}
+
 body .access .access-wrap {
   padding: 0 15px;
 }
@@ -494,6 +515,12 @@ body .access .access-wrap {
 @media (min-width: 768px) {
   body .access .access-wrap {
     padding: 0 70px;
+  }
+}
+
+@media (min-width: 1024px) {
+  body .access .access-wrap {
+    padding: 0 200px;
   }
 }
 
@@ -593,8 +620,20 @@ body footer .footer-wrap ul {
   padding: 10px 10px 0 0;
 }
 
+@media (min-width: 1024px) {
+  body footer .footer-wrap ul {
+    padding: 30px 30px 0 0;
+  }
+}
+
 body footer .footer-wrap ul li {
-  margin-right: 4px;
+  margin-right: .25rem;
+}
+
+@media (min-width: 1024px) {
+  body footer .footer-wrap ul li {
+    margin-right: 1.25rem;
+  }
 }
 
 body footer .footer-wrap ul li a .fab {
