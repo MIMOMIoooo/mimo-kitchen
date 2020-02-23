@@ -252,6 +252,12 @@ body .news .news-wrapper {
   margin-bottom: 3rem;
 }
 
+@media (min-width: 768px) {
+  body .news .news-wrapper {
+    padding: 0 40px;
+  }
+}
+
 body .news .news-wrapper ul {
   padding: 35px 15px;
   color: #fff;
@@ -306,6 +312,7 @@ body .concept .section-title {
 
 body .concept .section-title h3 {
   text-align: center;
+  font-size: 1.5em;
 }
 
 body .concept .section-title h3::after {
@@ -326,9 +333,22 @@ body .concept .concept-wrap .bread-about {
   background-size: cover;
 }
 
+@media (min-width: 768px) {
+  body .concept .concept-wrap .bread-about {
+    height: 370px;
+  }
+}
+
 body .concept .concept-wrap .bread-about .bread {
-  height: 115px;
-  margin: 0 0 10px 50px;
+  width: 85%;
+  height: 125px;
+  margin: 0 0 0 auto;
+}
+
+@media (min-width: 768px) {
+  body .concept .concept-wrap .bread-about .bread {
+    padding: 10px;
+  }
 }
 
 body .concept .concept-wrap .bread-about .bread h5 {
@@ -343,9 +363,22 @@ body .concept .concept-wrap .pasta-about {
   background-color: #25150a;
 }
 
+@media (min-width: 768px) {
+  body .concept .concept-wrap .pasta-about {
+    height: 414px;
+    background-position: 0 60px;
+  }
+}
+
 body .concept .concept-wrap .pasta-about .pasta {
+  width: 85%;
   height: 145px;
-  margin: 0 50px 10px 0;
+}
+
+@media (min-width: 768px) {
+  body .concept .concept-wrap .pasta-about .pasta {
+    padding: 10px;
+  }
 }
 
 body .concept .concept-wrap .pasta-about .pasta h5 {
@@ -362,9 +395,23 @@ body .concept .concept-wrap .coffee-about {
   background-color: #25150a;
 }
 
+@media (min-width: 768px) {
+  body .concept .concept-wrap .coffee-about {
+    background-position-x: -52px;
+    height: 440px;
+  }
+}
+
 body .concept .concept-wrap .coffee-about .coffee {
+  width: 85%;
   height: 145px;
-  margin: 0 0 10px 50px;
+  margin: 0 0 0 auto;
+}
+
+@media (min-width: 768px) {
+  body .concept .concept-wrap .coffee-about .coffee {
+    padding: 10px;
+  }
 }
 
 body .concept .concept-wrap .coffee-about .coffee h5 {
@@ -378,9 +425,22 @@ body .concept .concept-wrap .vegetable-about {
   background-size: cover;
 }
 
+@media (min-width: 768px) {
+  body .concept .concept-wrap .vegetable-about {
+    height: 440px;
+  }
+}
+
 body .concept .concept-wrap .vegetable-about .vegetable {
   height: 145px;
+  width: 85%;
   margin: 0 50px 10px 0;
+}
+
+@media (min-width: 768px) {
+  body .concept .concept-wrap .vegetable-about .vegetable {
+    padding: 10px;
+  }
 }
 
 body .concept .concept-wrap .vegetable-about .vegetable h5 {
@@ -399,6 +459,12 @@ body .concept .concept-wrap .concept-text h5 {
   text-align: center;
 }
 
+@media (min-width: 768px) {
+  body .concept .concept-wrap .concept-text h5 {
+    font-size: 1.4rem;
+  }
+}
+
 body .concept .concept-wrap .concept-text p {
   font-size: 0.9em;
   text-align: left;
@@ -406,8 +472,20 @@ body .concept .concept-wrap .concept-text p {
   padding-right: 20px;
 }
 
+@media (min-width: 768px) {
+  body .concept .concept-wrap .concept-text p {
+    font-size: 1rem;
+  }
+}
+
 body .access .access-wrap {
-  padding: 0 30px;
+  padding: 0 15px;
+}
+
+@media (min-width: 768px) {
+  body .access .access-wrap {
+    padding: 0 70px;
+  }
 }
 
 body .access .access-wrap .section-title {
@@ -417,6 +495,7 @@ body .access .access-wrap .section-title {
 body .access .access-wrap .section-title h3 {
   margin: 0 0 2rem 0;
   text-align: center;
+  font-size: 1.5em;
 }
 
 body .access .access-wrap .section-title h3::after {
@@ -431,14 +510,33 @@ body .access .access-wrap .maps {
   text-align: center;
 }
 
+@media (min-width: 768px) {
+  body .access .access-wrap .maps {
+    margin-bottom: 2rem;
+  }
+}
+
 body .access .access-wrap .maps iframe {
   max-width: 290px;
   max-height: 200px;
 }
 
+@media (min-width: 768px) {
+  body .access .access-wrap .maps iframe {
+    max-width: 500px;
+    max-height: 350px;
+  }
+}
+
+@media (min-width: 1024px) {
+  body .access .access-wrap .maps iframe {
+    max-width: 600px;
+  }
+}
+
 body .access .access-wrap .access-list {
   padding-left: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 1.8rem;
   font-weight: bold;
   border-left: 3px solid #000;
 }
@@ -454,7 +552,10 @@ body .access .access-wrap .access-list address {
 body .access .access-wrap .access-list address .access-txt-box {
   font-size: .8rem;
   font-weight: bold;
-  margin-bottom: 15px;
+}
+
+body .access .access-wrap .access-list address .access-txt-box:not(:last-child) {
+  margin-bottom: 1rem;
 }
 
 body .access .access-wrap .access-list address .access-txt-box .access-txt {
