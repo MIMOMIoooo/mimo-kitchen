@@ -9,6 +9,20 @@ body, p, a, ul, li {
   text-decoration: none;
 }
 
+th, td {
+  text-align: left;
+  vertical-align: middle;
+}
+
+div, p, address, table, tbody, tr, th, td {
+  line-height: 1.7;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", "Yu Gothic", Verdana, sans-serif;
+}
+
 body {
   position: relative;
   overflow-x: hidden;
@@ -393,16 +407,20 @@ body .concept .concept-wrap .concept-text p {
   padding-right: 20px;
 }
 
-body .access .section-title {
+body .access .access-wrap {
+  padding: 0 30px;
+}
+
+body .access .access-wrap .section-title {
   position: relative;
 }
 
-body .access .section-title h3 {
+body .access .access-wrap .section-title h3 {
   margin: 0 0 2rem 0;
   text-align: center;
 }
 
-body .access .section-title h3::after {
+body .access .access-wrap .section-title h3::after {
   display: block;
   content: "";
   border-bottom: 3px solid #000;
@@ -410,13 +428,46 @@ body .access .section-title h3::after {
   margin: 10px auto;
 }
 
-body .access .maps {
+body .access .access-wrap .maps {
   text-align: center;
 }
 
-body .access .maps iframe {
+body .access .access-wrap .maps iframe {
   max-width: 290px;
   max-height: 200px;
+}
+
+body .access .access-wrap .access-list {
+  padding-left: 20px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  border-left: 3px solid #000;
+}
+
+body .access .access-wrap .access-list .access-title {
+  padding-left: 30px;
+}
+
+body .access .access-wrap .access-list address {
+  padding-left: 30px;
+}
+
+body .access .access-wrap .access-list address .access-txt-box {
+  font-size: .8rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+body .access .access-wrap .access-list address .access-txt-box .access-txt {
+  line-height: 2;
+}
+
+body .access .access-wrap .access-list address .access-table {
+  line-height: 2;
+}
+
+body .access .access-wrap .access-list address .access-table tr th {
+  padding-right: 20px;
 }
 
 body footer {
