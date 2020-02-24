@@ -26,6 +26,7 @@ body {
 body {
   position: relative;
   overflow-x: hidden;
+  /*PCサイズのナビ表示でスクロールすると出てくる下線(カレント表示)*/
 }
 
 body .fixed-top {
@@ -236,7 +237,6 @@ body header .article-header--page:before {
   left: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.15);
-  /*半透明のフィルター*/
 }
 
 body header .article-header-logo h2 {
@@ -320,6 +320,7 @@ body .concept .section-title {
 }
 
 body .concept .section-title h3 {
+  margin: 0 0 2rem 0;
   text-align: center;
   font-size: 1.5em;
 }
@@ -341,6 +342,42 @@ body .concept .concept-wrap {
     border: 1px solid #262426;
     border-radius: 5px;
     background-color: #262426;
+  }
+}
+
+body .concept .concept-wrap .concept-text {
+  background-color: #fff;
+  height: 100px;
+}
+
+body .concept .concept-wrap .concept-text h5 {
+  font-size: 1rem;
+  margin: 0 auto 1rem auto;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  body .concept .concept-wrap .concept-text h5 {
+    font-size: 1.4rem;
+  }
+}
+
+body .concept .concept-wrap .concept-text p {
+  font-size: 0.9em;
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: 768px) {
+  body .concept .concept-wrap .concept-text p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  body .concept .concept-wrap .concept-text p {
+    text-align: center;
   }
 }
 
@@ -473,42 +510,6 @@ body .concept .concept-wrap .vegetable-about .vegetable {
 body .concept .concept-wrap .vegetable-about .vegetable h5 {
   margin: 0 auto 1rem auto;
   padding-top: 1rem;
-}
-
-body .concept .concept-wrap .concept-text {
-  background-color: #fff;
-  height: 100px;
-}
-
-body .concept .concept-wrap .concept-text h5 {
-  font-size: 1rem;
-  margin: 0 auto 1rem auto;
-  text-align: center;
-}
-
-@media (min-width: 768px) {
-  body .concept .concept-wrap .concept-text h5 {
-    font-size: 1.4rem;
-  }
-}
-
-body .concept .concept-wrap .concept-text p {
-  font-size: 0.9em;
-  text-align: left;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-@media (min-width: 768px) {
-  body .concept .concept-wrap .concept-text p {
-    font-size: 1rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  body .concept .concept-wrap .concept-text p {
-    text-align: center;
-  }
 }
 
 body .access .access-wrap {
