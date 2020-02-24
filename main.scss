@@ -27,18 +27,15 @@ body {
 body {
   position: relative;
   overflow-x: hidden;
-  .fixed-top{
+  .fixed-top {
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
     z-index: 1030;
-  }
-  .top-page {
-    .site-header{
-      // height: 65px;
-      // padding-top: 10px;
+    .site-header {
       background-color: transparent;
+      max-height: 65px;
       @media (min-width:1024px) {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
@@ -47,18 +44,14 @@ body {
     .headerColor-default {
       background-color: #262426;
     }
+    // 左上のロゴ
     .container {
-      // padding-top: 10px;
-      // grid-template-columns: repeat(3, 1fr);
-      // display: grid;
       grid-column: 2;
       .site-header-branding {
         grid-column: 2;
         text-align: center;
-        // line-height: 72px;
         line-height: 65px;
         .site-title {
-          // height: 72px;
           margin: 0;
           .site-logo {
             img{
@@ -68,9 +61,10 @@ body {
         }
       }
     }
+    // ハンバーガーメニュー
     #nav-drawer {
       position: relative;
-      top: -54px;
+      top: -42px;
       left: 25px;
       .nav-unshown {
         display:none;
@@ -157,19 +151,18 @@ body {
       }
     }
     
+    // 1024px以上で表示されるナビメニュー
     .nav-pc-size {
       display: none;
       @media  (min-width:1024px) {
         display: grid;
-        grid-column: 8/13;
+        grid-column: 7/12;
       }
       .nav-content-pc {
         .nav-items-menu-pc {
           @media (min-width:1024px) {
             display: flex;
-            // justify-content: space-between;
             justify-content: space-around;
-            // padding-top: 20px;
             line-height: 72px;
           }
           li {
@@ -180,7 +173,7 @@ body {
         }
       }
     }
-  }//top-page
+  }//fixed-top
 
   // PCサイズのナビ表示でスクロールすると出てくる下線(カレント表示)
   .link-current {
@@ -437,9 +430,7 @@ body {
       @media (min-width: 768px) { //共通
         padding: 0 70px;
       }
-      @media (min-width: 1024px) {
-        // padding: 0 200px;
-      }
+
       //繰り返しスタイル
       .section-title {
         position: relative;
@@ -496,7 +487,6 @@ body {
             padding-top: 2rem;
           }
           .access-title {
-            // text-align: center;
             padding-left: 30px;
           }
           address {

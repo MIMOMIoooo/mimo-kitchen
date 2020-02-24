@@ -36,53 +36,54 @@ body .fixed-top {
   z-index: 1030;
 }
 
-body .top-page .site-header {
+body .fixed-top .site-header {
   background-color: transparent;
+  max-height: 65px;
 }
 
 @media (min-width: 1024px) {
-  body .top-page .site-header {
+  body .fixed-top .site-header {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
   }
 }
 
-body .top-page .headerColor-default {
+body .fixed-top .headerColor-default {
   background-color: #262426;
 }
 
-body .top-page .container {
+body .fixed-top .container {
   grid-column: 2;
 }
 
-body .top-page .container .site-header-branding {
+body .fixed-top .container .site-header-branding {
   grid-column: 2;
   text-align: center;
   line-height: 65px;
 }
 
-body .top-page .container .site-header-branding .site-title {
+body .fixed-top .container .site-header-branding .site-title {
   margin: 0;
 }
 
-body .top-page .container .site-header-branding .site-title .site-logo img {
+body .fixed-top .container .site-header-branding .site-title .site-logo img {
   height: 48px;
 }
 
-body .top-page #nav-drawer {
+body .fixed-top #nav-drawer {
   position: relative;
-  top: -54px;
+  top: -42px;
   left: 25px;
   /*閉じる用の薄黒カバー*/
   /*中身*/
   /*チェックが入ったら表示*/
 }
 
-body .top-page #nav-drawer .nav-unshown {
+body .fixed-top #nav-drawer .nav-unshown {
   display: none;
 }
 
-body .top-page #nav-drawer #nav-open {
+body .fixed-top #nav-drawer #nav-open {
   display: inline-block;
   width: 30px;
   height: 22px;
@@ -90,12 +91,12 @@ body .top-page #nav-drawer #nav-open {
 }
 
 @media (min-width: 1024px) {
-  body .top-page #nav-drawer #nav-open {
+  body .fixed-top #nav-drawer #nav-open {
     display: none;
   }
 }
 
-body .top-page #nav-drawer #nav-open span, body .top-page #nav-drawer #nav-open span:before, body .top-page #nav-drawer #nav-open span:after {
+body .fixed-top #nav-drawer #nav-open span, body .fixed-top #nav-drawer #nav-open span:before, body .fixed-top #nav-drawer #nav-open span:after {
   position: absolute;
   height: 3px;
   /*線の太さ*/
@@ -108,15 +109,15 @@ body .top-page #nav-drawer #nav-open span, body .top-page #nav-drawer #nav-open 
   cursor: pointer;
 }
 
-body .top-page #nav-drawer #nav-open span:before {
+body .fixed-top #nav-drawer #nav-open span:before {
   bottom: -8px;
 }
 
-body .top-page #nav-drawer #nav-open span:after {
+body .fixed-top #nav-drawer #nav-open span:after {
   bottom: -16px;
 }
 
-body .top-page #nav-drawer #nav-close {
+body .fixed-top #nav-drawer #nav-close {
   display: none;
   /*はじめは隠しておく*/
   position: fixed;
@@ -131,7 +132,7 @@ body .top-page #nav-drawer #nav-close {
   transition: .3s ease-in-out;
 }
 
-body .top-page #nav-drawer #nav-content {
+body .fixed-top #nav-drawer #nav-content {
   overflow: auto;
   position: fixed;
   top: 0;
@@ -151,55 +152,55 @@ body .top-page #nav-drawer #nav-content {
   /*左に隠しておく*/
 }
 
-body .top-page #nav-drawer #nav-content .nav-items-menu {
+body .fixed-top #nav-drawer #nav-content .nav-items-menu {
   width: auto;
   padding: 20px;
 }
 
-body .top-page #nav-drawer #nav-content .nav-items-menu li {
+body .fixed-top #nav-drawer #nav-content .nav-items-menu li {
   width: 50%;
   padding-top: 25px;
   padding-bottom: 10px;
   border-bottom: 1px solid #a0a0a0;
 }
 
-body .top-page #nav-drawer #nav-content .nav-items-menu a {
+body .fixed-top #nav-drawer #nav-content .nav-items-menu a {
   color: #fff;
 }
 
-body .top-page #nav-drawer #nav-input:checked ~ #nav-close {
+body .fixed-top #nav-drawer #nav-input:checked ~ #nav-close {
   display: block;
   /*カバーを表示*/
   opacity: .5;
 }
 
-body .top-page #nav-drawer #nav-input:checked ~ #nav-content {
+body .fixed-top #nav-drawer #nav-input:checked ~ #nav-content {
   -webkit-transform: translateX(0%);
   transform: translateX(0%);
   /*中身を表示（右へスライド）*/
   box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
 }
 
-body .top-page .nav-pc-size {
+body .fixed-top .nav-pc-size {
   display: none;
 }
 
 @media (min-width: 1024px) {
-  body .top-page .nav-pc-size {
+  body .fixed-top .nav-pc-size {
     display: grid;
-    grid-column: 8/13;
+    grid-column: 7/12;
   }
 }
 
 @media (min-width: 1024px) {
-  body .top-page .nav-pc-size .nav-content-pc .nav-items-menu-pc {
+  body .fixed-top .nav-pc-size .nav-content-pc .nav-items-menu-pc {
     display: flex;
     justify-content: space-around;
     line-height: 72px;
   }
 }
 
-body .top-page .nav-pc-size .nav-content-pc .nav-items-menu-pc li a {
+body .fixed-top .nav-pc-size .nav-content-pc .nav-items-menu-pc li a {
   color: #fff;
 }
 
