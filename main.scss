@@ -182,6 +182,11 @@ body {
     }
   }//top-page
 
+  // PCサイズのナビ表示でスクロールすると出てくる下線(カレント表示)
+  .link-current {
+    border-bottom: 2px solid #fff;
+  }
+
   header {
     .article-header {
       box-sizing: border-box;
@@ -322,8 +327,6 @@ body {
             margin: 0 auto 1rem auto;
             padding-top: .5rem;
           }
-          p {
-          }
         }
       }
       .pasta-about {
@@ -347,8 +350,6 @@ body {
           h5 {
             margin: 0 auto 1rem auto;
             padding-top: 1rem;
-          }
-          p {
           }
         }
       }
@@ -376,8 +377,6 @@ body {
             margin: 0 auto 1rem auto;
             padding-top: 1rem;
           }
-          p {
-          }
         }
       }
       .vegetable-about {
@@ -399,8 +398,6 @@ body {
           h5 {
             margin: 0 auto 1rem auto;
             padding-top: 1rem;
-          }
-          p {
           }
         }
 
@@ -519,8 +516,6 @@ body {
               tr {
                 th {
                   padding-right: 20px;
-                  td {
-                  }
                 }
               }
             }

@@ -203,6 +203,10 @@ body .top-page .nav-pc-size .nav-content-pc .nav-items-menu-pc li a {
   color: #fff;
 }
 
+body .link-current {
+  border-bottom: 2px solid #fff;
+}
+
 body header .article-header {
   box-sizing: border-box;
   color: #FFF;

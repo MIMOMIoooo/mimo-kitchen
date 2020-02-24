@@ -50,13 +50,13 @@
           </div>
         </nav>
         <!-- 480px以上のナビメニュー -->
-        <nav class="nav-pc-size">
+        <nav class="nav-pc-size nav-global">
           <div class="nav-content-pc">
             <ul class="nav-items-menu-pc">
-              <li><a href="#top">Home</a></li>
-              <li><a href="#news">News</a></li>
-              <li><a href="#concept">Concept</a></li>
-              <li><a href="#access">Access</a></li>
+              <li><a href="#top" id="top_link_js">Home</a></li>
+              <li><a href="#news" id="news_link_js">News</a></li>
+              <li><a href="#concept" id="concept_link_js">Concept</a></li>
+              <li><a href="#access" id="access_link_js">Access</a></li>
             </ul>
           </div>
         </nav>
@@ -66,7 +66,7 @@
     </div>
     <!-- ヘッダー -->
     <header>
-      <div id="top" class="article-header article-header--page js-mainVisual" data-type="image">
+      <div id="top" class="article-header article-header--page js-mainVisual position-now" data-type="image">
         <div class="article-parallax article-parallax--img">
           <!-- ヘッダーの画像 -->
           <!-- <img src="./img/header.jpg" alt="店内の写真"> -->
@@ -82,7 +82,7 @@
       </div>
     </header>
     <!-- お知らせ -->
-    <section id="news" class="news">
+    <section id="news" class="news position-now">
       <div class="news-wrapper">
         <ul>
           <li>
@@ -113,7 +113,7 @@
       </div>
     </section>
     <!-- コンセプト -->
-    <section id="concept" class="concept">
+    <section id="concept" class="concept position-now">
       <div class="section-title">
         <h3>CONCEPT</h3>
       </div>
@@ -145,7 +145,7 @@
       </div>
     </section>
     <!-- アクセス -->
-    <section id="access" class="access">
+    <section id="access" class="access position-now">
       <div class="access-wrap">
         <div class="section-title">
           <h3>ACCESS</h3>
@@ -218,6 +218,54 @@
               header.addClass('headerColor-default');
             }
         });
+      });
+
+      // スクロールでナビゲーション（ページ内リンク）のカレント表示
+      $(function(){
+        var set = 200;//ウインドウ上部からどれぐらいの位置で変化させるか
+        var boxTop = new Array;
+        var current = -1;
+        //各要素の位置
+        //場所を取得する対象の要素
+        $('.position-now').each(function(i){
+          boxTop[i] = $(this).offset().top;
+        });
+        //最初の要素にclass="positiion-now"をつける
+        changeBox(0);
+        //スクロールした時の処理
+        $(window).scroll(function(){
+          scrollPosition = $(window).scrollTop();
+          for (var i = boxTop.length - 1; i >= 0; i--) {
+            if ($(window).scrollTop() > boxTop[i] - set) {
+              changeBox(i);
+            break;
+            }
+          };
+        });
+
+        //ナビの処理
+        function changeBox(secNum) {
+          if (secNum != current) {
+            current = secNum;
+            secNum2 = secNum + 1;
+            //以下にクラス付与したい要素名と付与したいクラス名
+            $('.nav-global li a').removeClass('link-current');
+            //位置によって個別に処理をしたい場合
+            if (current == 0) {
+              $('#top_link_js').addClass('link-current');
+              // 現在地がsection1の場合の処理
+            } else if (current == 1) {
+              $('#news_link_js').addClass('link-current');
+              // 現在地がsection2の場合の処理
+            } else if (current == 2) {
+              // 現在地がsection3の場合の処理
+              $('#concept_link_js').addClass('link-current');
+            } else if (current == 3) {
+              // 現在地がsection4の場合の処理
+              $('#access_link_js').addClass('link-current');
+            }
+          }
+        };
       });
     </script>
   </body>
