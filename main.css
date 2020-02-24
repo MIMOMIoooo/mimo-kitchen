@@ -37,7 +37,6 @@ body .fixed-top {
 }
 
 body .top-page .site-header {
-  height: 65px;
   background-color: transparent;
 }
 
@@ -53,22 +52,21 @@ body .top-page .headerColor-default {
 }
 
 body .top-page .container {
-  grid-template-columns: repeat(3, 1fr);
-  display: grid;
+  grid-column: 2;
 }
 
 body .top-page .container .site-header-branding {
   grid-column: 2;
   text-align: center;
+  line-height: 65px;
 }
 
 body .top-page .container .site-header-branding .site-title {
-  height: 72px;
   margin: 0;
 }
 
 body .top-page .container .site-header-branding .site-title .site-logo img {
-  height: 55px;
+  height: 48px;
 }
 
 body .top-page #nav-drawer {
@@ -189,15 +187,15 @@ body .top-page .nav-pc-size {
 @media (min-width: 1024px) {
   body .top-page .nav-pc-size {
     display: grid;
-    grid-column: 8/12;
+    grid-column: 8/13;
   }
 }
 
 @media (min-width: 1024px) {
   body .top-page .nav-pc-size .nav-content-pc .nav-items-menu-pc {
     display: flex;
-    justify-content: space-between;
-    padding-top: 20px;
+    justify-content: space-around;
+    line-height: 72px;
   }
 }
 
