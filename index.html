@@ -68,7 +68,6 @@
             <h2>
               <img src="./img/mino-kitchen.png" alt="ロゴ">
             </h2>
-          <!-- </div> -->
         </div>
       </div>
     </header>
@@ -145,7 +144,6 @@
           <div class="maps">
             <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d6481.737112742061!2d139.7699894!3d35.6802384!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp!4v1582338058783!5m2!1sja!2sjp" width="800" height="600" frameborder="0" style="border:0;border: 1px solid gray;" allowfullscreen="">
             </iframe>
-            
           </div>
           <div class="access-list">
             <h2 class="access-title">MIMO KITCHEN</h2>
@@ -172,7 +170,6 @@
             </address>
           </div>
         </div>
-      <!-- access-wrap -->
       </div>
     </section>
     <footer>
@@ -193,70 +190,59 @@
   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
   </script>
 
-    <script>
-      // ヘッダーナビの色をスクロールで変更する
-      $(function(){
-        var imgHeight = $('.js-mainVisual').outerHeight(); 
-        //画像の高さを取得。これがイベント発火位置になる。
-        var header = $('.js-header'); //ヘッダーコンテンツ
-      
-        $(window).on('load scroll', function(){
-            if ($(window).scrollTop() < imgHeight) {
-             //メインビジュアル内にいるので、クラスを外す。
-              header.removeClass('headerColor-default');
-            }else {
-             //メインビジュアルより下までスクロールしたので、クラスを付けて色を変える
-              header.addClass('headerColor-default');
-            }
-        });
+  <script>
+    // ヘッダーナビの色をスクロールで変更する
+    $(function(){
+      var imgHeight = $('.js-mainVisual').outerHeight(); 
+      var header = $('.js-header');
+    
+      $(window).on('load scroll', function(){
+          if ($(window).scrollTop() < imgHeight) {
+            header.removeClass('headerColor-default');
+          }else {
+            header.addClass('headerColor-default');
+          }
       });
+    });
 
-      // スクロールでナビゲーション（ページ内リンク）のカレント表示
-      $(function(){
-        var set = 200;//ウインドウ上部からどれぐらいの位置で変化させるか
-        var boxTop = new Array;
-        var current = -1;
-        //各要素の位置
-        //場所を取得する対象の要素
-        $('.position-now').each(function(i){
-          boxTop[i] = $(this).offset().top;
-        });
-        //最初の要素にclass="positiion-now"をつける
-        changeBox(0);
-        //スクロールした時の処理
-        $(window).scroll(function(){
-          scrollPosition = $(window).scrollTop();
-          for (var i = boxTop.length - 1; i >= 0; i--) {
-            if ($(window).scrollTop() > boxTop[i] - set) {
-              changeBox(i);
-            break;
-            }
-          };
-        });
-        //ナビの処理
-        function changeBox(secNum) {
-          if (secNum != current) {
-            current = secNum;
-            secNum2 = secNum + 1;
-            //以下にクラス付与したい要素名と付与したいクラス名
-            $('.nav-global li a').removeClass('link-current');
-            //位置によって個別に処理をしたい場合
-            if (current == 0) {
-              $('#top_link_js').addClass('link-current');
-              // 現在地がsection1の場合の処理
-            } else if (current == 1) {
-              $('#news_link_js').addClass('link-current');
-              // 現在地がsection2の場合の処理
-            } else if (current == 2) {
-              // 現在地がsection3の場合の処理
-              $('#concept_link_js').addClass('link-current');
-            } else if (current == 3) {
-              // 現在地がsection4の場合の処理
-              $('#access_link_js').addClass('link-current');
-            }
+    // ナビゲーション（ページ内リンク）のカレント表示
+    $(function(){
+      var set = 200;
+      var boxTop = new Array;
+      var current = -1;
+
+      $('.position-now').each(function(i){
+        boxTop[i] = $(this).offset().top;
+      });
+      changeBox(0);
+      $(window).scroll(function(){
+        scrollPosition = $(window).scrollTop();
+        for (var i = boxTop.length - 1; i >= 0; i--) {
+          if ($(window).scrollTop() > boxTop[i] - set) {
+            changeBox(i);
+          break;
           }
         };
       });
-    </script>
+      //ナビの処理
+      function changeBox(secNum) {
+        if (secNum != current) {
+          current = secNum;
+          secNum2 = secNum + 1;
+
+          $('.nav-global li a').removeClass('link-current');
+          if (current == 0) {
+            $('#top_link_js').addClass('link-current');
+          } else if (current == 1) {
+            $('#news_link_js').addClass('link-current');
+          } else if (current == 2) {
+            $('#concept_link_js').addClass('link-current');
+          } else if (current == 3) {
+            $('#access_link_js').addClass('link-current');
+          }
+        }
+      };
+    });
+  </script>
   </body>
 </html>
